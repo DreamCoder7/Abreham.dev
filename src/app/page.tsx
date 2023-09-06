@@ -1,3 +1,5 @@
+import Intro from "./_components/Intro/Intro";
+
 export default function Home() {
-  return <h1>Hello abreham.dev</h1>;
+  return <Intro />;
 }
