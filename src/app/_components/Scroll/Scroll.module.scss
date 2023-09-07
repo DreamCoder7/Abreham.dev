@@ -1,0 +1,53 @@
+@import "../../_styles/varaibles.scss";
+
+.Scroll {
+  position: fixed;
+  right: $spacing-8;
+  height: 100%;
+
+  @include flex(column, center, normal, $spacing-36);
+}
+
+.List {
+  @include flex(column, normal, center, $spacing-12);
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: $color--gray-400;
+    width: 1px;
+    height: 100%;
+
+    position: absolute;
+    right: $spacing-4;
+  }
+}
+
+.Item {
+  list-style: none;
+}
+
+.Num {
+  color: $color--gray-50;
+  font-size: $fontSize-3;
+  cursor: pointer;
+}
+
+.Helper {
+  @include flex(column, normal, center, $spacing-12);
+  cursor: pointer;
+}
+
+.HelperTitle {
+  font-size: $fontSize-3;
+  font-weight: $fontWeight-bold;
+  color: $color--gray-400;
+
+  transform: rotate(90deg);
+}
+
+.Icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: $color--gray-50;
+}
