@@ -1,3 +1,7 @@
+$color--primary: #22c55e;
+$color--primary-dark: #052e16;
+$color--primary-white: #f0fdf4;
+
 $color--gray-50: #f9fafb;
 $color--gray-100: #f3f4f6;
 $color--gray-200: #e5e7eb;
@@ -85,4 +89,14 @@ $fontSize-11: 6rem;
   display: grid;
   grid-template-columns: $templateColumns;
   gap: $gap;
+}
+
+/*Custome Btn*/
+%Btn {
+  all: unset;
+
+  font-size: $fontSize-4;
+  font-weight: $fontWeight-bold;
+  color: $color--gray-50;
+  cursor: pointer;
 }
