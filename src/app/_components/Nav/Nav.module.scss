@@ -1,0 +1,33 @@
+@import "../../_styles/varaibles.scss";
+
+.Nav {
+  grid-column: 1 / -1;
+  padding: $spacing-12 $spacing-32;
+
+  @include flex(row, space-between, normal, $spacing-2);
+}
+
+.List {
+  @include flex(row, normal, center, $spacing-16);
+}
+
+.Item {
+  list-style: none;
+}
+
+.Link {
+  text-decoration: none;
+
+  font-size: $fontSize-4;
+  font-weight: $fontWeight-bold;
+  color: $color--gray-50;
+}
+
+.ContactBtn {
+  @extend %Btn;
+
+  border: 2px solid $color--gray-50;
+  box-shadow: 0 0 1rem $color--gray-50;
+  padding: $spacing-3 $spacing-6;
+  border-radius: 5px;
+}
