@@ -8,19 +8,9 @@ function Logo(props: LogoProps) {
   const { isBgDark } = props;
 
   return isBgDark ? (
-    <Image
-      src="/logo-white.svg"
-      alt="Logo DreamCoder"
-      width={100}
-      height={100}
-    />
+    <Image src="/logo-white.svg" alt="Logo DreamCoder" width={50} height={50} />
   ) : (
-    <Image
-      src="/logo-dark.svg"
-      alt="Logo DreamCoder"
-      width={100}
-      height={100}
-    />
+    <Image src="/logo-dark.svg" alt="Logo DreamCoder" width={50} height={50} />
   );
 }
 
