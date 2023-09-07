@@ -1,0 +1,60 @@
+@import "../../_styles/varaibles.scss";
+
+.Header {
+  @include grid(repeat(2, 1fr), 0);
+  align-items: center;
+  height: 100vh;
+
+  background-color: $color--gray-dark;
+}
+
+.Content {
+  padding: 0 $spacing-32;
+
+  @include flex(column, normal, normal, $spacing-8);
+}
+
+.Title {
+  font-size: $fontSize-11;
+  font-weight: $fontWeight-bold;
+  color: $color--gray-50;
+}
+
+.Text {
+  font-size: $fontSize-4;
+  color: $color--gray-50;
+  line-height: $lineHeight-normal;
+}
+
+.AboutBtn {
+  @extend %Btn;
+  @include flex(row, normal, center, $spacing-4);
+
+  color: $color--primary;
+}
+
+.ImgCon {
+  width: 75%;
+
+  margin: 0 auto;
+}
+
+.Icon {
+  width: 2rem;
+  height: 2rem;
+  color: $color--primary;
+}
+
+.GithubLink {
+  text-decoration: none;
+
+  position: absolute;
+  bottom: $spacing-8;
+  left: $spacing-32;
+}
+
+.GitHubIcon {
+  color: $color--gray-50;
+  width: 3.2rem;
+  height: 3.2rem;
+}
