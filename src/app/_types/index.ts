@@ -3,3 +3,10 @@ export interface IntroProps {
   text: string;
   btnText: string;
 }
+
+export interface LottieAnimationProps {
+  animationData: any;
+  loop?: boolean;
+  autoplay?: boolean;
+  speed?: number;
+}
