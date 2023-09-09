@@ -1,0 +1,67 @@
+@import "../../_styles/varaibles.scss";
+
+.About {
+  @include grid(repeat(2, 1fr), $spacing-8);
+  height: 100vh;
+
+  padding: $spacing-40 $spacing-32;
+  background-color: $color--gray-100;
+
+  @media (max-width: 360px) {
+    padding: $spacing-4;
+    grid-template-columns: 1fr;
+  }
+}
+
+.AboutDark {
+  @extend .About;
+
+  background-color: $color--gray-dark;
+}
+
+.Intro {
+  background-color: $color--gray-50;
+  padding: $spacing-24 $spacing-32;
+  padding-left: $spacing-24;
+  padding-bottom: 0;
+
+  align-self: center;
+  height: 25rem;
+
+  @media (max-width: 360px) {
+    padding: $spacing-4;
+  }
+}
+
+.IntroDark {
+  @extend .Intro;
+
+  background-color: $color--gray-900;
+}
+
+.Title {
+  font-size: $fontSize-10;
+  font-weight: $fontWeight-bold;
+  color: $color--gray-900;
+
+  @media (max-width: 360px) {
+    font-size: $fontSize-9;
+  }
+}
+
+.TitleDark {
+  @extend .Title;
+
+  color: $color--gray-50;
+}
+
+.Text {
+}
+
+.Info {
+}
+
+.InfoText {
+  color: $color--gray-50;
+  font-size: $fontSize-4;
+}
