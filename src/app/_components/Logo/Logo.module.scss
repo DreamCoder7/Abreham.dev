@@ -1,0 +1,45 @@
+@import "../../_styles/varaibles.scss";
+
+%Icon {
+  width: 3rem;
+  height: 3rem;
+  color: $color--gray-50;
+  cursor: pointer;
+  box-shadow: 0 0 1rem $color--gray-50;
+  border-radius: 50%;
+  padding: 6px;
+
+  position: absolute;
+  bottom: -$spacing-20;
+  left: $spacing-4;
+  z-index: 2;
+}
+
+.Logo {
+  position: relative;
+
+  &::after {
+    content: "";
+    background-color: $color--gray-700;
+    width: 1px;
+    height: 6rem;
+
+    position: absolute;
+    bottom: -$spacing-20;
+    left: $spacing-10;
+    z-index: -1;
+  }
+}
+
+.SunIcon {
+  @extend %Icon;
+}
+
+.MoonIcon {
+  @extend %Icon;
+
+  // color: $color--gray-900;
+  background-color: $color--gray-900;
+  width: 3rem;
+  height: 3rem;
+}
