@@ -98,14 +98,20 @@
 }
 
 .ScrollHelper {
-  position: fixed;
-  right: $spacing-10;
-  top: 40%;
-  z-index: 1;
+  display: none;
 
   &Icon {
     width: 2.4rem;
     height: 2.4rem;
     color: $color--gray-50;
+  }
+
+  @media (max-width: 744px) {
+    display: inline-block;
+
+    position: fixed;
+    right: $spacing-10;
+    top: 40%;
+    z-index: 1;
   }
 }
