@@ -7,7 +7,7 @@
   padding: $spacing-40 $spacing-32;
   background-color: $color--gray-100;
 
-  @media (max-width: 360px) {
+  @media (max-width: 460px) {
     padding: $spacing-4;
     grid-template-columns: 1fr;
   }
@@ -28,7 +28,7 @@
   align-self: center;
   height: 25rem;
 
-  @media (max-width: 360px) {
+  @media (max-width: 460px) {
     padding: $spacing-4;
   }
 }
@@ -44,7 +44,7 @@
   font-weight: $fontWeight-bold;
   color: $color--gray-900;
 
-  @media (max-width: 360px) {
+  @media (max-width: 460px) {
     font-size: $fontSize-9;
   }
 }

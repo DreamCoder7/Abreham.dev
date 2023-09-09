@@ -7,7 +7,7 @@
 
   background-color: $color--gray-100;
 
-  @media (max-width: 360px) {
+  @media (max-width: 460px) {
     grid-template-columns: 1fr;
   }
 }
@@ -22,7 +22,7 @@
 
   @include flex(column, normal, normal, $spacing-8);
 
-  @media (max-width: 360px) {
+  @media (max-width: 460px) {
     grid-row: 2;
   }
 
@@ -36,7 +36,7 @@
   font-weight: $fontWeight-bold;
   color: $color--gray-900;
 
-  @media (max-width: 360px) {
+  @media (max-width: 460px) {
     font-size: $fontSize-7;
   }
 }
@@ -76,7 +76,7 @@
   margin-top: $spacing-24;
   width: 75%;
 
-  @media (max-width: 360px) {
+  @media (max-width: 460px) {
     grid-row: 1;
     width: 100%;
 
@@ -98,7 +98,7 @@
   bottom: $spacing-8;
   left: $spacing-32;
 
-  @media (max-width: 360px) {
+  @media (max-width: 460px) {
     left: $spacing-12;
   }
 }
