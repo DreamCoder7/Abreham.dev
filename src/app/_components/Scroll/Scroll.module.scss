@@ -5,21 +5,51 @@
   right: $spacing-8;
   height: 100%;
 
-  @include flex(column, center, normal, $spacing-36);
+  @include flex(column, center, flex-start, $spacing-40);
+  margin-top: $spacing-40;
+
+  @media (max-width: 744px) {
+    bottom: 0;
+    height: 20%;
+
+    flex-direction: row;
+    gap: $spacing-24;
+    align-items: center;
+  }
 }
 
 .List {
-  @include flex(column, normal, center, $spacing-12);
+  @include flex(column, normal, flex-start, $spacing-12);
   position: relative;
 
-  &::before {
+  &::after {
     content: "";
-    background-color: $color--gray-400;
+    background-color: $color--gray-600;
     width: 1px;
     height: 100%;
 
     position: absolute;
-    right: $spacing-4;
+    right: -$spacing-12;
+  }
+
+  @media (max-width: 744px) {
+    display: none;
+  }
+}
+
+.ShowList {
+  @media (max-width: 744px) {
+    background-color: $color--gray-900;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    padding: 1rem;
+    height: 30%;
+
+    @include flex(column, center, center, $spacing-10);
+
+    position: fixed;
+    right: 0;
+    top: 30%;
   }
 }
 
@@ -28,18 +58,27 @@
 }
 
 .Num {
-  color: $color--gray-50;
+  color: $color--gray-900;
   font-size: $fontSize-3;
+  font-weight: $fontWeight-bold;
   cursor: pointer;
+}
+
+.NumDark {
+  @extend .Num;
+
+  color: $color--gray-50;
+  font-weight: $fontWeight-medium;
 }
 
 .Helper {
   @include flex(column, normal, center, $spacing-12);
+  margin-top: $spacing-24;
   cursor: pointer;
 }
 
 .HelperTitle {
-  font-size: $fontSize-3;
+  font-size: $fontSize-2;
   font-weight: $fontWeight-bold;
   color: $color--gray-400;
 
@@ -49,5 +88,24 @@
 .Icon {
   width: 2.4rem;
   height: 2.4rem;
+  color: $color--gray-900;
+}
+
+.IconDark {
+  @extend .Icon;
+
   color: $color--gray-50;
+}
+
+.ScrollHelper {
+  position: fixed;
+  right: $spacing-10;
+  top: 40%;
+  z-index: 1;
+
+  &Icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: $color--gray-50;
+  }
 }

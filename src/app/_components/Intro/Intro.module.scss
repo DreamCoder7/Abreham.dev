@@ -5,6 +5,15 @@
   align-items: center;
   height: 100vh;
 
+  background-color: $color--gray-100;
+
+  @media (max-width: 360px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.HeaderDark {
+  @extend .Header;
   background-color: $color--gray-dark;
 }
 
@@ -12,18 +21,42 @@
   padding: 0 $spacing-32;
 
   @include flex(column, normal, normal, $spacing-8);
+
+  @media (max-width: 360px) {
+    grid-row: 2;
+  }
+
+  @media (max-width: 360px) {
+    padding: 0 $spacing-12;
+  }
 }
 
 .Title {
   font-size: $fontSize-11;
   font-weight: $fontWeight-bold;
+  color: $color--gray-900;
+
+  @media (max-width: 360px) {
+    font-size: $fontSize-7;
+  }
+}
+
+.TitleDark {
+  @extend .Title;
+
   color: $color--gray-50;
 }
 
 .Text {
   font-size: $fontSize-4;
-  color: $color--gray-50;
+  color: $color--gray-900;
   line-height: $lineHeight-normal;
+}
+
+.TextDark {
+  @extend .Text;
+
+  color: $color--gray-50;
 }
 
 .AboutBtn {
@@ -31,30 +64,52 @@
   @include flex(row, normal, center, $spacing-4);
 
   color: $color--primary;
+
+  &:hover {
+    .Icon {
+      transform: rotate(90deg);
+    }
+  }
 }
 
 .ImgCon {
+  margin-top: $spacing-24;
   width: 75%;
 
-  margin: 0 auto;
+  @media (max-width: 360px) {
+    grid-row: 1;
+    width: 100%;
+
+    margin-top: $spacing-32;
+  }
 }
 
 .Icon {
   width: 2rem;
   height: 2rem;
   color: $color--primary;
+  transition: all 0.5s;
 }
 
 .GithubLink {
   text-decoration: none;
 
-  position: absolute;
+  position: fixed;
   bottom: $spacing-8;
   left: $spacing-32;
+
+  @media (max-width: 360px) {
+    left: $spacing-12;
+  }
 }
 
 .GitHubIcon {
-  color: $color--gray-50;
+  color: $color--gray-900;
   width: 3.2rem;
   height: 3.2rem;
+}
+
+.GitHubIconDark {
+  @extend .GitHubIcon;
+  color: $color--gray-50;
 }
