@@ -57,6 +57,7 @@
 }
 
 .AboutBtn {
+  text-decoration: none;
   @extend %Btn;
   @include flex(row, normal, center, $spacing-4);
 

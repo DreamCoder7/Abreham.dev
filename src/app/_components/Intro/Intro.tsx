@@ -26,10 +26,10 @@ function Intro() {
         <p className={mode === "dark" ? classes.TextDark : classes.Text}>
           {text}
         </p>
-        <button className={classes.AboutBtn}>
+        <Link href="#about" className={classes.AboutBtn}>
           {btnText}
           <IoIosArrowForward className={classes.Icon} />
-        </button>
+        </Link>
       </div>
       <div className={classes.ImgCon}>
         <DisplayLottie animationData={LottieAnimation} />

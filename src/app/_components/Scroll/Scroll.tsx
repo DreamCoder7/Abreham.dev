@@ -2,11 +2,18 @@
 import { useContext, useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { BsArrowBarLeft, BsArrowBarRight } from "react-icons/bs";
+import Link from "next/link";
 
 import classes from "./Scroll.module.scss";
 import { ModeContext } from "@/app/_context/modeContext";
 
-const nums = ["00", "01", "02", "03", "04"];
+const nums = [
+  { num: "00", to: "home" },
+  { num: "01", to: "about" },
+  { num: "02", to: "portfolio" },
+  { num: "03", to: "experience" },
+  { num: "04", to: "contact" },
+];
 
 function Scroll() {
   const { mode } = useContext(ModeContext);
@@ -19,11 +26,14 @@ function Scroll() {
   return (
     <div className={classes.Scroll}>
       <ul className={isScrollHelper ? classes.ShowList : classes.List}>
-        {nums.map((n) => (
-          <li className={classes.Item} key={n}>
-            <p className={mode === "dark" ? classes.NumDark : classes.Num}>
-              {n}
-            </p>
+        {nums.map(({ num, to }) => (
+          <li className={classes.Item} key={num}>
+            <Link
+              href={`#${to}`}
+              className={mode === "dark" ? classes.NumDark : classes.Num}
+            >
+              {num}
+            </Link>
           </li>
         ))}
       </ul>
