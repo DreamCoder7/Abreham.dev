@@ -1,0 +1,114 @@
+@import "../../_styles/varaibles.scss";
+
+.Portfolio {
+  background-color: $color--gray-dark;
+  height: 100vh;
+
+  @include flex(row, center, center, 0);
+}
+
+.PortfolioDark {
+  @extend .Portfolio;
+  background-color: $color--gray-100;
+}
+
+.Intro {
+  @include flex(column, center, center, $spacing-3);
+  width: 30%;
+
+  @media (max-width: 460px) {
+    width: 100%;
+    padding: 0 $spacing-3;
+  }
+}
+
+.Title {
+  color: $color--gray-50;
+  font-size: $fontSize-9;
+  font-weight: $fontWeight-bold;
+  text-align: center;
+}
+
+.TitleDark {
+  @extend .Title;
+  color: $color--gray-900;
+}
+
+.Text {
+  color: $color--gray-100;
+  font-size: $fontSize-4;
+  text-align: center;
+}
+
+.TextDark {
+  @extend .Text;
+  color: $color--gray-900;
+}
+
+.Classify {
+  position: absolute;
+  left: $spacing-32;
+
+  @media (max-width: 460px) {
+    display: none;
+  }
+}
+
+.List {
+  position: relative;
+
+  @include flex(column, normal, normal, $spacing-12);
+
+  &::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: $color--gray-100;
+    @include flex(row, normal, normal, $spacing-6);
+
+    position: absolute;
+  }
+}
+
+.ListDark {
+  @extend .List;
+
+  &::before {
+    background-color: $color--gray-900;
+  }
+}
+
+.Item {
+  list-style: none;
+  color: $color--gray-50;
+  font-size: $fontSize-4;
+  font-weight: $fontWeight-bold;
+  padding-left: $spacing-4;
+  cursor: pointer;
+}
+
+.ItemDark {
+  @extend .Item;
+  color: $color--gray-900;
+}
+
+.Btn {
+  text-decoration: none;
+  color: $color--primary;
+  font-size: $fontSize-4;
+  font-weight: $fontWeight-bold;
+  margin-top: $spacing-6;
+  cursor: pointer;
+  @include flex(row, normal, center, $spacing-1);
+
+  &:hover {
+    .Icon {
+      transform: translateX(1rem);
+    }
+  }
+}
+
+.Icon {
+  color: $color--primary;
+  transition: all 0.5s;
+}
